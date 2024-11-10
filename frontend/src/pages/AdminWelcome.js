@@ -9,7 +9,7 @@ const AdminWelcome = () => {
     // Fetch users from the backend
     const fetchUsers = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/users/all', {
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/users/all`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
